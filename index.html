@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Red Hot Strength — Stärker in 2 × 20 Minuten | Köln</title>
+<meta name="description" content="Das schnellste wirksame Krafttraining in Köln. Schwere Grundübungen im beheizten Rotlicht-Raum. Sichere dir jetzt einen Gründungsplatz.">
+
+<!-- Meta-Pixel (ID 2511476369351736) wird erst nach Einwilligung geladen — siehe Skript am Seitenende -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Sora:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#0A0705; --bg2:#140D09; --panel:#17100B;
+    --red:#E8331A; --red-bright:#FF4422; --ember:#F0863A;
+    --text:#F5EFE9; --muted:#A99E94; --faint:#6B635B;
+    --line:#2A201A;
+    --maxw:1100px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:'Sora',sans-serif; font-weight:300;
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+    overflow-x:hidden; position:relative;
+  }
+  body::before{
+    content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(120% 70% at 50% -10%, rgba(232,51,26,.38), rgba(232,51,26,0) 55%),
+      radial-gradient(90% 60% at 85% 15%, rgba(240,134,58,.16), rgba(240,134,58,0) 50%),
+      radial-gradient(80% 80% at 15% 95%, rgba(232,51,26,.12), rgba(232,51,26,0) 55%);
+    animation:breathe 9s ease-in-out infinite;
+  }
+  body::after{
+    content:""; position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  @keyframes breathe{0%,100%{opacity:.85}50%{opacity:1}}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px; position:relative; z-index:1}
+
+  nav{position:sticky; top:0; z-index:50; backdrop-filter:blur(10px);
+    background:rgba(10,7,5,.55); border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--maxw); margin:0 auto; padding:16px 24px;
+    display:flex; align-items:center; justify-content:space-between}
+  .brand{font-family:'Archivo Black',sans-serif; font-size:18px; letter-spacing:.04em}
+  .brand span{color:var(--red)}
+  .tag{font-family:'Space Mono',monospace; font-size:11px; letter-spacing:.18em;
+    color:var(--muted); text-transform:uppercase}
+  .btn{font-family:'Sora',sans-serif; font-weight:600; font-size:15px; cursor:pointer;
+    border:none; border-radius:2px; padding:14px 26px; text-decoration:none;
+    display:inline-block; transition:transform .15s ease, box-shadow .2s ease}
+  .btn-primary{background:var(--red); color:#fff; box-shadow:0 0 0 rgba(232,51,26,0)}
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 10px 34px rgba(232,51,26,.45)}
+  .btn-ghost{background:transparent; color:var(--text); border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--red); color:var(--red-bright)}
+  .nav-in .btn{padding:10px 20px; font-size:14px}
+
+  header{padding:90px 0 80px; text-align:center}
+  .eyebrow{font-family:'Space Mono',monospace; font-size:13px; letter-spacing:.32em;
+    text-transform:uppercase; color:var(--red-bright); margin-bottom:28px}
+  h1{font-family:'Archivo Black',sans-serif; font-weight:400;
+    font-size:clamp(42px,8.5vw,92px); line-height:.96; letter-spacing:-.01em;
+    text-transform:uppercase; margin-bottom:26px}
+  h1 .hot{color:var(--red); text-shadow:0 0 38px rgba(232,51,26,.55)}
+  .lead{font-size:clamp(17px,2.4vw,21px); color:var(--muted); max-width:620px; margin:0 auto 40px}
+  .cta-row{display:flex; gap:16px; justify-content:center; flex-wrap:wrap; align-items:center}
+  .deposit-note{font-family:'Space Mono',monospace; font-size:12px; color:var(--faint);
+    margin-top:18px; letter-spacing:.04em}
+
+  .rv{opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease}
+  .rv.in{opacity:1; transform:none}
+  header .rv:nth-child(1){transition-delay:.05s}
+  header .rv:nth-child(2){transition-delay:.15s}
+  header .rv:nth-child(3){transition-delay:.28s}
+  header .rv:nth-child(4){transition-delay:.4s}
+
+  section{padding:72px 0; position:relative; z-index:1}
+  .sec-label{font-family:'Space Mono',monospace; font-size:12px; letter-spacing:.28em;
+    text-transform:uppercase; color:var(--red); margin-bottom:14px; text-align:center}
+  h2{font-family:'Archivo Black',sans-serif; font-weight:400;
+    font-size:clamp(28px,4.6vw,46px); line-height:1.04; text-transform:uppercase;
+    text-align:center; margin-bottom:48px; letter-spacing:-.01em}
+
+  .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:4px;
+    padding:34px 28px; transition:border-color .25s ease, transform .25s ease}
+  .card:hover{border-color:var(--red); transform:translateY(-4px)}
+  .card .num{font-family:'Space Mono',monospace; font-size:13px; color:var(--red);
+    letter-spacing:.1em; margin-bottom:18px}
+  .card h3{font-family:'Archivo Black',sans-serif; font-weight:400; font-size:21px;
+    text-transform:uppercase; margin-bottom:12px; line-height:1.1}
+  .card p{color:var(--muted); font-size:15px}
+  .card .data{font-family:'Space Mono',monospace; font-size:12px; color:var(--ember);
+    margin-top:16px; letter-spacing:.06em}
+
+  .science{display:grid; grid-template-columns:1fr 1fr; gap:40px; max-width:880px; margin:0 auto; text-align:left}
+  .science .blk h3{font-family:'Archivo Black',sans-serif; font-weight:400; font-size:19px;
+    text-transform:uppercase; margin-bottom:12px}
+  .science .blk h3 b{color:var(--red)}
+  .science .blk p{color:var(--muted); font-size:15px}
+
+  .offer{max-width:560px; margin:0 auto; text-align:center;
+    background:linear-gradient(180deg, var(--bg2), var(--panel));
+    border:1px solid var(--line); border-radius:6px; padding:48px 36px;
+    box-shadow:0 0 80px rgba(232,51,26,.12)}
+  .price{font-family:'Archivo Black',sans-serif; font-size:64px; line-height:1; margin:8px 0 4px}
+  .price small{font-family:'Space Mono',monospace; font-size:16px; color:var(--muted); font-weight:400}
+  .scarcity{font-family:'Space Mono',monospace; font-size:13px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--red-bright); margin-bottom:8px}
+  .incl{color:var(--muted); font-size:15px; margin:20px 0 30px}
+  .incl b{color:var(--text); font-weight:600}
+  .offer .btn-primary{width:100%; padding:18px; font-size:17px}
+  .refund{font-family:'Space Mono',monospace; font-size:12px; color:var(--faint); margin-top:16px}
+
+  .waitlist{max-width:480px; margin:40px auto 0; text-align:center}
+  .waitlist p{color:var(--muted); font-size:14px; margin-bottom:14px}
+  .wl-form{display:flex; gap:10px; flex-wrap:wrap}
+  .wl-form input{flex:1; min-width:200px; background:var(--bg2); border:1px solid var(--line);
+    border-radius:2px; padding:14px 16px; color:var(--text); font-family:'Sora',sans-serif; font-size:15px}
+  .wl-form input:focus{outline:none; border-color:var(--red)}
+  .wl-msg{font-size:14px; color:var(--ember); margin-top:12px; min-height:20px}
+
+  .faq{max-width:720px; margin:0 auto}
+  details{border-bottom:1px solid var(--line); padding:22px 0}
+  summary{font-family:'Sora',sans-serif; font-weight:600; font-size:17px; cursor:pointer;
+    list-style:none; display:flex; justify-content:space-between; align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+"; color:var(--red); font-size:24px; font-family:'Space Mono',monospace}
+  details[open] summary::after{content:"−"}
+  details p{color:var(--muted); font-size:15px; margin-top:14px}
+
+  footer{border-top:1px solid var(--line); padding:48px 0; text-align:center; position:relative; z-index:1}
+  footer .brand{font-size:16px; margin-bottom:14px}
+  .legal{font-family:'Space Mono',monospace; font-size:11px; color:var(--faint);
+    max-width:620px; margin:0 auto; line-height:1.7; letter-spacing:.02em}
+  .footlinks{margin-top:18px; font-size:13px; color:var(--muted)}
+  .footlinks a{color:var(--muted); text-decoration:none; margin:0 10px; cursor:pointer}
+  .footlinks a:hover{color:var(--red)}
+
+  /* consent banner */
+  .consent{position:fixed; left:0; right:0; bottom:0; z-index:200; display:none;
+    align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;
+    background:rgba(10,7,5,.96); border-top:1px solid var(--line);
+    padding:18px 24px; backdrop-filter:blur(8px)}
+  .consent-text{font-size:14px; color:var(--muted); max-width:640px}
+  .consent-text a{color:var(--red); text-decoration:underline; cursor:pointer}
+  .consent-btns{display:flex; gap:10px}
+  .consent .btn{padding:11px 22px; font-size:14px}
+
+  /* modal */
+  .modal{position:fixed; inset:0; z-index:300; display:none;
+    align-items:flex-start; justify-content:center; padding:40px 20px;
+    background:rgba(0,0,0,.72); overflow-y:auto}
+  .modal-box{position:relative; background:var(--bg2); border:1px solid var(--line);
+    border-radius:6px; max-width:720px; width:100%; padding:48px 40px; margin:auto}
+  .modal-close{position:absolute; top:16px; right:18px; background:none; border:none;
+    color:var(--muted); font-size:28px; cursor:pointer; line-height:1}
+  .modal-close:hover{color:var(--red)}
+  .modal-box h2{text-align:left; font-size:28px; margin-bottom:24px}
+  .legal-body{color:var(--muted); font-size:14px; line-height:1.7}
+  .legal-body h3{color:var(--text); font-family:'Sora',sans-serif; font-weight:600;
+    font-size:16px; margin:22px 0 8px}
+  .legal-body p{margin-bottom:10px}
+  .legal-body a{color:var(--red); text-decoration:underline; word-break:break-word}
+
+  @media(max-width:760px){
+    .grid3{grid-template-columns:1fr}
+    .science{grid-template-columns:1fr; gap:28px}
+    .nav-in .tag{display:none}
+    section{padding:56px 0}
+    .modal-box{padding:36px 22px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <div class="brand">RED HOT <span>STRENGTH</span></div>
+    <div class="tag">Köln · Eröffnung 2026</div>
+    <a href="#offer" class="btn btn-primary" onclick="track('InitiateCheckout')">Platz sichern</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow rv">Köln · Das schnellste wirksame Krafttraining</div>
+    <h1 class="rv">Stärker in <span class="hot">2 × 20</span><br>Minuten pro Woche</h1>
+    <p class="lead rv">Schwere Grundübungen im beheizten Rotlicht-Raum. Kein Maschinenpark, keine Stunden im Studio – nur das, was wirklich wirkt. Hitze macht geschmeidig, Rotlicht beschleunigt die Regeneration. Während du trainierst.</p>
+    <div class="cta-row rv">
+      <a href="#offer" class="btn btn-primary" onclick="track('InitiateCheckout')">Gründungsplatz sichern</a>
+      <a href="#how" class="btn btn-ghost">Wie es funktioniert</a>
+    </div>
+    <div class="deposit-note rv">19 € Anzahlung · voll erstattbar · sichert deinen Gründungspreis</div>
+  </div>
+</header>
+
+<section id="how">
+  <div class="wrap">
+    <div class="sec-label rv">Das Prinzip</div>
+    <h2 class="rv">Reduziert auf das, was wirkt</h2>
+    <div class="grid3">
+      <div class="card rv">
+        <div class="num">01</div>
+        <h3>Schwere Grundübungen</h3>
+        <p>Nur die drei fundamentalen Muster: Kniebeuge, Drücken, Ziehen. An freien Power Racks, ein Trainer auf der Fläche. Keine komplexen Maschinen.</p>
+        <div class="data">// SQUAT · PRESS · PULL</div>
+      </div>
+      <div class="card rv">
+        <div class="num">02</div>
+        <h3>Hitze &amp; Rotlicht</h3>
+        <p>Trainiert wird im beheizten Raum unter großflächigen Rotlicht-Panels. Leistung und Regeneration passieren gleichzeitig – im selben Raum.</p>
+        <div class="data">// 35–40 °C · 660 + 850 nm</div>
+      </div>
+      <div class="card rv">
+        <div class="num">03</div>
+        <h3>Zweimal 20 Minuten</h3>
+        <p>Die wirksame Mindestdosis, zweimal pro Woche. Maximaler Effekt, minimaler Zeitaufwand – ausgelegt für volle Kalender.</p>
+        <div class="data">// 2× / WOCHE</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-label rv">Warum es wirkt</div>
+    <h2 class="rv">Der Raum ist das Gerät</h2>
+    <div class="science">
+      <div class="blk rv">
+        <h3><b>Infrarot-Wärme</b></h3>
+        <p>Macht Muskeln und Faszien sofort geschmeidig, eliminiert das lange Warm-up und schützt vor Verletzungen – während sie den Stoffwechsel hochfährt.</p>
+      </div>
+      <div class="blk rv">
+        <h3><b>Rotlicht</b> (Photobiomodulation)</h3>
+        <p>Rotes und nahinfrarotes Licht stimulieren die Mitochondrien, unterstützen die Zellenergie und verkürzen die Regeneration nach dem Training.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="offer">
+  <div class="wrap">
+    <div class="sec-label rv">Gründungsmitglied</div>
+    <h2 class="rv">Die ersten 50 sichern sich den Gründungspreis</h2>
+    <div class="offer rv">
+      <div class="scarcity">Limitiert · nur 50 Plätze</div>
+      <div class="price">150 €<small> / Monat</small></div>
+      <div class="incl"><b>2× Training pro Woche</b> · Trainer auf der Fläche · Hitze &amp; Rotlicht inklusive · Gründungspreis dauerhaft gesichert</div>
+      <a href="https://buy.stripe.com/dRm9AVa18dCmcS1e599sk00" class="btn btn-primary" onclick="track('InitiateCheckout')">Platz mit 19 € sichern →</a>
+      <div class="refund">Voll erstattbar · wird mit deinem ersten Beitrag verrechnet</div>
+    </div>
+
+    <div class="waitlist rv">
+      <p>Noch nicht sicher? Trag dich unverbindlich auf die Warteliste.</p>
+      <form class="wl-form" onsubmit="return joinWaitlist(event)">
+        <input type="email" name="email" placeholder="deine@email.de" required>
+        <button type="submit" class="btn btn-ghost">Auf die Warteliste</button>
+      </form>
+      <div class="wl-msg" id="wlMsg"></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-label rv">Fragen</div>
+    <h2 class="rv">Gut zu wissen</h2>
+    <div class="faq">
+      <details class="rv"><summary>Was genau ist Red Hot Strength?</summary><p>Ein minimalistisches Studio für schweres Krafttraining in einem beheizten Rotlicht-Raum. Zweimal 20 Minuten pro Woche an den drei Grundübungen – mehr braucht es nicht, um stärker zu werden und Muskel- und Knochenmasse zu erhalten.</p></details>
+      <details class="rv"><summary>Brauche ich Vorerfahrung?</summary><p>Nein. Ein Trainer ist auf der Fläche, zeigt dir die Technik und sichert dich. Die Übungen sind bewusst einfach gehalten.</p></details>
+      <details class="rv"><summary>Ist die Anzahlung wirklich erstattbar?</summary><p>Ja, vollständig. Die 19 € sind eine Reservierung für deinen Gründungsplatz. Kommt es nicht zur Eröffnung oder trittst du zurück, bekommst du den Betrag zurück – andernfalls wird er mit deinem ersten Monatsbeitrag verrechnet.</p></details>
+      <details class="rv"><summary>Wann und wo eröffnet ihr?</summary><p>Standort und Termin in Köln stehen kurz vor der Festlegung. Als Gründungsmitglied erfährst du es zuerst und bekommst den Preis dauerhaft gesichert.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">RED HOT <span style="color:var(--red)">STRENGTH</span></div>
+    <p class="legal">Die 19 € sind eine erstattbare Vorab-Reservierung für die geplante Eröffnung in Köln. Es besteht kein Anspruch auf Eröffnung; im Fall der Nicht-Eröffnung oder bei Rücktritt wird der Betrag vollständig zurückerstattet. Red Hot Strength befindet sich in der Konzeptphase.</p>
+    <div class="footlinks">
+      <a onclick="openModal('impressum')">Impressum</a> · <a onclick="openModal('datenschutz')">Datenschutz</a> · <a href="mailto:jan.paulsburg@web.de">Kontakt</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Cookie-Consent-Banner -->
+<div id="consent" class="consent" role="dialog" aria-label="Cookie-Einwilligung">
+  <div class="consent-text">Wir verwenden den Meta-Pixel, um die Wirkung unserer Anzeigen zu messen. Das passiert nur mit deiner Einwilligung. Mehr dazu in der <a onclick="openModal('datenschutz')">Datenschutzerklärung</a>.</div>
+  <div class="consent-btns">
+    <button class="btn btn-ghost" onclick="declineConsent()">Ablehnen</button>
+    <button class="btn btn-primary" onclick="acceptConsent()">Akzeptieren</button>
+  </div>
+</div>
+
+<!-- Impressum -->
+<div id="impressum" class="modal" onclick="if(event.target===this)closeModal('impressum')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('impressum')">&times;</button>
+    <h2>Impressum</h2>
+    <div class="legal-body">
+      <h3>Angaben gemäß § 5 DDG</h3>
+      <p>Jan Paulsburg<br>Red Hot Strength<br>Erkrather Straße 96<br>40233 Düsseldorf</p>
+      <h3>Kontakt</h3>
+      <p>Telefon: +49 177 6889166<br>E-Mail: jan.paulsburg@web.de</p>
+      <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
+      <p>Jan Paulsburg, Anschrift wie oben.</p>
+      <h3>Hinweis</h3>
+      <p>Red Hot Strength befindet sich derzeit in der Konzept- und Validierungsphase. Es besteht kein Anspruch auf Eröffnung. Vorab-Reservierungen erfolgen per erstattbarer Anzahlung.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Datenschutz -->
+<div id="datenschutz" class="modal" onclick="if(event.target===this)closeModal('datenschutz')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('datenschutz')">&times;</button>
+    <h2>Datenschutz&shy;erklärung</h2>
+    <div class="legal-body">
+      <h3>1. Verantwortlicher</h3>
+      <p>Jan Paulsburg, Erkrather Straße 96, 40233 Düsseldorf. E-Mail: jan.paulsburg@web.de, Telefon: +49 177 6889166.</p>
+
+      <h3>2. Deine Rechte</h3>
+      <p>Dir stehen die Rechte auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21) zu. Eine erteilte Einwilligung kannst du jederzeit mit Wirkung für die Zukunft widerrufen (Art. 7 Abs. 3 DSGVO). Außerdem hast du ein Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde (Art. 77 DSGVO).</p>
+
+      <h3>3. Hosting und Server-Logfiles</h3>
+      <p>Diese Website wird bei einem externen Dienstleister gehostet (Hosting-Anbieter: [BITTE EINTRAGEN, z. B. Netlify, Inc. oder Vercel Inc.]). Beim Aufruf werden automatisch technische Zugriffsdaten (z. B. IP-Adresse, Datum und Uhrzeit, abgerufene Seite, Browsertyp) in Server-Logfiles verarbeitet. Rechtsgrundlage ist das berechtigte Interesse am sicheren und stabilen Betrieb (Art. 6 Abs. 1 lit. f DSGVO).</p>
+
+      <h3>4. Cookies und Einwilligung</h3>
+      <p>Marketing-Technologien (Meta-Pixel) setzen wir nur ein, wenn du zuvor über den Einwilligungs-Banner zugestimmt hast. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Du kannst die Einwilligung jederzeit für die Zukunft widerrufen, indem du die Seite erneut aufrufst und ablehnst oder die entsprechenden Cookies in deinem Browser löschst.</p>
+
+      <h3>5. Meta-Pixel (Meta Platforms Ireland Ltd.)</h3>
+      <p>Nach deiner Einwilligung nutzen wir den Meta-Pixel der Meta Platforms Ireland Ltd., Merrion Road, Dublin 4, Irland, um die Wirkung unserer Werbeanzeigen zu messen (z. B. Seitenaufrufe und Klicks). Dabei können Daten an Meta übermittelt und in die USA übertragen werden. Weitere Informationen: <a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener">facebook.com/privacy/policy</a>. Rechtsgrundlage: Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</p>
+
+      <h3>6. Wartelisten-Formular (Formspree)</h3>
+      <p>Für die Warteliste verarbeiten wir die von dir angegebene E-Mail-Adresse über den Dienst Formspree (Formspree, Inc., USA), um dich über den Start zu informieren. Dabei werden Daten in die USA übertragen. Rechtsgrundlage: Einwilligung bzw. vorvertragliche Maßnahmen (Art. 6 Abs. 1 lit. a und b DSGVO).</p>
+
+      <h3>7. Zahlungsabwicklung (Stripe)</h3>
+      <p>Anzahlungen wickeln wir über den Zahlungsdienstleister Stripe ab (Stripe Payments Europe, Ltd., Irland, sowie Stripe, Inc., USA). Die zur Zahlung nötigen Daten (z. B. Name, E-Mail, Zahlungsdaten) werden direkt bei Stripe verarbeitet; vollständige Zahlungsdaten speichern wir nicht selbst. Rechtsgrundlage: Vertragserfüllung bzw. vorvertragliche Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO). Weitere Informationen: <a href="https://stripe.com/de/privacy" target="_blank" rel="noopener">stripe.com/de/privacy</a>.</p>
+
+      <h3>8. Kontaktaufnahme</h3>
+      <p>Wenn du uns per E-Mail kontaktierst, verarbeiten wir deine Angaben zur Bearbeitung der Anfrage. Rechtsgrundlage: Art. 6 Abs. 1 lit. b bzw. f DSGVO.</p>
+
+      <h3>9. Speicherdauer</h3>
+      <p>Wir speichern personenbezogene Daten nur so lange, wie es für die genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen es verlangen.</p>
+
+      <p style="margin-top:18px; font-size:12px; color:var(--faint)">Stand: [MONAT/JAHR EINTRAGEN]. Diese Datenschutzerklärung ist eine Vorlage und ersetzt keine Rechtsberatung.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ---------- Einwilligung + Meta-Pixel ----------
+  var PIXEL_ID = '2511476369351736';
+  function loadPixel(){
+    if (window.fbq) return;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,
+      'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', PIXEL_ID);
+    fbq('track', 'PageView');
+  }
+  function getConsent(){ try{ return localStorage.getItem('rhs_consent'); }catch(e){ return null; } }
+  function setConsent(v){ try{ localStorage.setItem('rhs_consent', v); }catch(e){} }
+  function track(ev){ try{ if(window.fbq) fbq('track', ev); }catch(e){} }
+
+  function hideBanner(){ var el=document.getElementById('consent'); if(el) el.style.display='none'; }
+  function acceptConsent(){ setConsent('granted'); hideBanner(); loadPixel(); }
+  function declineConsent(){ setConsent('denied'); hideBanner(); }
+
+  (function initConsent(){
+    var c = getConsent();
+    if (c === 'granted'){ loadPixel(); }
+    else if (c !== 'denied'){ var el=document.getElementById('consent'); if(el) el.style.display='flex'; }
+  })();
+
+  // ---------- Modals ----------
+  function openModal(id){ var el=document.getElementById(id); if(el) el.style.display='flex'; }
+  function closeModal(id){ var el=document.getElementById(id); if(el) el.style.display='none'; }
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ closeModal('impressum'); closeModal('datenschutz'); } });
+
+  // ---------- Warteliste (Formspree) ----------
+  function joinWaitlist(e){
+    e.preventDefault();
+    var email = e.target.email.value;
+    track('Lead');
+    fetch('https://formspree.io/f/mjgdwepp', {
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({email:email, quelle:'Red Hot Strength Warteliste'})
+    }).then(function(){
+      document.getElementById('wlMsg').textContent = 'Danke – du bist auf der Liste. Wir melden uns zuerst bei dir.';
+      e.target.reset();
+    }).catch(function(){
+      document.getElementById('wlMsg').textContent = 'Hat nicht geklappt – bitte später nochmal versuchen.';
+    });
+    return false;
+  }
+
+  // ---------- Scroll-Reveal ----------
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+  },{threshold:.14});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+  window.addEventListener('load', function(){
+    document.querySelectorAll('header .rv').forEach(function(el){ el.classList.add('in'); });
+  });
+</script>
+</body>
+</html>
